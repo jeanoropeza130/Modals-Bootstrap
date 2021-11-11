@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Feedback - Castor</title>
+    
+  </head>
+  <body>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">Abrir</button>
+  
+  <!--Modal 1-->
+  <div class="modal fade" id="miModal" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modalTitle">¿Estas Disfrutando de Castor?</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                  <b>!Hola¡ Nos encataria saber si estas teniendo una gran experiencia.</b>
+                </p>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal2" data-bs-dismiss="modal"><img src="emojis/no.png" alt=""><b>No</b></button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal3" data-bs-dismiss="modal"><img src="emojis/si.png" alt=""><b>Si!</b></button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn1 btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+  </div>
+   <!--Modal 2-->
+   <div class="modal fade" id="modal2" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle2" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modalTitle2">Lamentamos los incovenientes que tengas con Castor</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="textarea">
+                <textarea cols="30" placeholder="¿Le gustaria contarnos como podemos mejorar su experiencia?"></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-secondary" href="#miModal" data-bs-toggle="modal" data-bs-dismiss="modal" role="button">Regresar</a>
+                <button type="button" class="btn2 " data-bs-dismiss="modal">Enviar</button>
+                <button type="button" class="btn1 btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                
+            </div>
+        </div>
+    </div>
+  </div>
+
+<!--Modal 3-->
+<div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle3" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div><img src="emojis/logo.png" alt=""></div>
+          <div class="modal-header">
+              <h4 class="modal-title" id="modalTitle2">¿Como te sentirias si no pudieras usar mas los servicios de Castor?</h4>
+          </div>
+          <div class="modal-body">
+            <div class="container1">
+
+              <div class="item">
+                <label for="0">
+                <input class="radio" type="radio" name="feedback" id="0" value="0">
+                <span><img src="emojis/1.png" alt=""></span>
+              </label>
+              </div>
+          
+              <div class="item">
+                <label for="1">
+                <input class="radio" type="radio" name="feedback" id="1" value="1">
+                <span><img src="emojis/2.png" alt=""></span>
+              </label>
+              </div>
+          
+              <div class="item">
+                <label for="2">
+                <input class="radio" type="radio" name="feedback" id="2" value="2">
+                <span><img src="emojis/3.png" alt=""></span>
+              </label>
+              </div>
+          
+              <div class="item">
+                <label for="3">
+                <input class="radio" type="radio" name="feedback" id="3" value="3">
+                <span><img src="emojis/4.png" alt=""></span>
+              </label>
+              </div>
+          
+              <div class="item">
+                <label for="4">
+                <input class="radio" type="radio" name="feedback" id="4" value="4">
+                <span><img src="emojis/5.png" alt=""></span>
+              </label>
+              </div>
+          
+            </div> 
+          </div>
+          <div class="modal-footer">
+              <a class="btn btn-secondary" href="#miModal" data-bs-toggle="modal" data-bs-dismiss="modal" role="button">Regresar</a>
+              <button type="button" class="btn2" data-bs-dismiss="modal">Enviar</button>
+              <button type="button" class="btn1 btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+  </div>
+</div>
+
+    <!--  -->
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   
+  </body>
+</html>
