@@ -9,6 +9,44 @@
     <link rel="stylesheet" href="style.css">
     <title>Feedback - Castor</title>
     
+    <script>
+      function validacion(){
+    
+        var formvalido = true;
+        var comentarios = document.getElementById("comentarios").value;
+        if(comentarios == null || comentarios.length == 0){
+          alert("Por favor, escribe un comentario");
+          return false;
+        }  
+    
+      return formvalido;
+      console.log(comentarios);
+      }
+    
+
+    function validacion1(){
+    
+    var formvalido = true;
+
+    var radioseleccionado =false;
+    var feedback  = document.getElementsByName("feedback");
+      for(let index = 0; index < feedback.length; index++){
+        if(feedback[index].checked){
+          radioseleccionado = true;
+        }
+      }
+      if(!radioseleccionado)
+          {
+           alert("No has marcado ninguna opcion.");
+          formvalido = false;
+          }
+          
+          return formvalido;
+          console.log(feedback[index].value);
+    }
+  
+    </script>
+
   </head>
   <body>
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">Abrir</button>
@@ -43,13 +81,17 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
             </div>
             <div class="modal-body">
+              <form method="GET" action="" onsubmit=" return validacion()">
               <div class="textarea">
-                <textarea cols="30" placeholder="¿Le gustaria contarnos como podemos mejorar su experiencia?"></textarea>
+                <textarea cols="30" id="comentarios" placeholder="¿Le gustaria contarnos como podemos mejorar su experiencia?" required></textarea>
               </div>
+             
+              <button type="submit" class="btn2 " >Enviar</button>
+            </form>
             </div>
             <div class="modal-footer">
                 <a class="btn btn-secondary" href="#miModal" data-bs-toggle="modal" data-bs-dismiss="modal" role="button">Regresar</a>
-                <button type="button" class="btn2 " data-bs-dismiss="modal">Enviar</button>
+                
                 <button type="button" class="btn1 btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 
             </div>
@@ -66,8 +108,10 @@
               <h4 class="modal-title" id="modalTitle2">¿Como te sentirias si no pudieras usar mas los servicios de Castor?</h4>
           </div>
           <div class="modal-body">
+            <form method="GET" action="" onsubmit=" return validacion1()">
+            
             <div class="container1">
-
+            
               <div class="item">
                 <label for="0">
                 <input class="radio" type="radio" name="feedback" id="0" value="0">
@@ -102,12 +146,14 @@
                 <span><img src="emojis/5.png" alt=""></span>
               </label>
               </div>
-          
+              <button type="submit" class="btn2 " >Enviar</button>
             </div> 
+
+           
+          </form>
           </div>
           <div class="modal-footer">
               <a class="btn btn-secondary" href="#miModal" data-bs-toggle="modal" data-bs-dismiss="modal" role="button">Regresar</a>
-              <button type="button" class="btn2" data-bs-dismiss="modal">Enviar</button>
               <button type="button" class="btn1 btn-secondary" data-bs-dismiss="modal">Cerrar</button>
           </div>
         </div>
@@ -121,4 +167,5 @@
 
    
   </body>
+
 </html>
