@@ -14,25 +14,30 @@
     
         var formvalido = true;
         var comentarios = document.getElementById("comentarios").value;
+        console.log(comentarios)
         if(comentarios == null || comentarios.length == 0){
           alert("Por favor, escribe un comentario");
           return false;
         }  
     
       return formvalido;
-      console.log(comentarios);
+      
       }
     
 
+     
     function validacion1(){
     
     var formvalido = true;
 
     var radioseleccionado =false;
     var feedback  = document.getElementsByName("feedback");
+    
       for(let index = 0; index < feedback.length; index++){
         if(feedback[index].checked){
           radioseleccionado = true;
+          alert(feedback[index].value);
+          
         }
       }
       if(!radioseleccionado)
@@ -40,10 +45,9 @@
            alert("No has marcado ninguna opcion.");
           formvalido = false;
           }
-          
           return formvalido;
-          console.log(feedback[index].value);
-    }
+          
+    } 
   
     </script>
 
@@ -146,11 +150,11 @@
                 <span><img src="emojis/5.png" alt=""></span>
               </label>
               </div>
-              <button type="submit" class="btn2 " >Enviar</button>
+              
             </div> 
-
-           
+            <button type="submit" class="btn2 " >Enviar</button>
           </form>
+          
           </div>
           <div class="modal-footer">
               <a class="btn btn-secondary" href="#miModal" data-bs-toggle="modal" data-bs-dismiss="modal" role="button">Regresar</a>
